@@ -16,6 +16,7 @@ import {
   Text,
   useColorScheme,
   View,
+  Image,
 } from 'react-native';
 
 import {
@@ -65,13 +66,28 @@ const App = () => {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Text> Pravin Vargad </Text>
+        <Text style={styles.welcome}> Pravin Vargad </Text>
+        {/* <Image
+          style={styles.image}
+          source={{
+            uri: 'https://image.shutterstock.com/image-photo/kiev-july-29-2019-lenovo-260nw-1587918376.jpg',
+          }}
+        /> */}
+        <Image
+          style={styles.tinyLogo}
+          source={{
+            uri: 'https://www.lenovo.com/medias/lenovo-thinkpad-e14-gallery-01.jpg?context=bWFzdGVyfHJvb3R8NTAxMjB8aW1hZ2UvanBlZ3xoYmMvaDM5LzEwNTg5NTEyNzYxMzc0LmpwZ3xkYWJlMGJkYTkxZjQ1YjJkZGE3YjFhYzQ1M2M1NTk0MDI2ZWFjOWJiMzI1OTgyMjNhNGY4M2RmMTBlYzI3MDUy',
+          }}
+        />
       </ScrollView>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
+  welcome: {
+    fontSize: 50,
+  },
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
